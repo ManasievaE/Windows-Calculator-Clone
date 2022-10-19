@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+.calculator {
+  float: left;
+  width: 80%;
+  height: 89vh;
+  color: #bebebe;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(auto, 100%));
+  grid-template-rows: repeat(8, 14%);
+}
+
+/*****************SCREEN******************/
+.calculator .screen {
+  grid-column: span 4;
+  background: #bebebe;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 35px 10px 10px 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: -3.5em;
+}
+
+.screen .previous {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+.screen .current {
+  color: #202020;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/*****************M-BUTTONS******************/
+.calculator .m-buttons {
+  grid-column: span 4;
+  background: #bebebe;
+  color: #202020;
+  display: flex;
+  height: max-content;
+  font-weight: bold;
+  align-items: flex-end;
+  justify-content: left;
+  margin-top: 3.5em;
+}
+
+.calculator .m-buttons p {
+  padding: 15px 30px;
+  margin: 0px 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.calculator .m-buttons p:hover {
+  background: #b6b6b6;
+  box-shadow: 0px 0px 2px 0px #fff;
+}
+
+.m-buttons .faded {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*****************BUTTONS******************/
+
+.calculator > button {
+  background: #cac8c81a;
+  color: #202020;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 1.5px solid #bebebe;
+  outline: none;
+}
+
+.calculator button.data-number,
+.calculator button.different {
+  background: white;
+  color: #202020;
+  font-weight: normal;
+}
+
+.calculator button:hover {
+  background: #b6b6b6 !important;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 4px 0px #999;
+}
+
+/*****************HISTORY******************/
+
+.history-data {
+  background-color: #bebebe;
+  display: inline-block;
+  width: 20%;
+  height: 100vh;
+  margin: auto;
+  text-align: right;
+  overflow-y: auto;
+}
+
+.history-data .container {
+  position: relative;
+  padding: 30px 0px;
+}
+
+.container h4 {
+  display: flex;
+  position: fixed;
+  text-align: right;
+  color: #202020;
+  margin: 0px 12px 5em 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.oneComputation {
+  margin: 2em 0;
+  padding-right: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.oneComputation p:first-child {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.oneComputation p:last-child {
+  font-size: 1.1rem;
+  color: #202020;
+  margin: 5px 0px;
+}
+#clearHistory {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+#clearHistory:hover {
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+#showHistory {
+  position: fixed;
+  top: 5px;
+  right: 1em;
+  cursor: pointer;
+}
+#noHistoryText {
+  font-size: 1em;
+  margin-left: 2em;
+  text-align: left;
+  color: grey;
+}
+/*****************RESPONSIVE******************/
+
+@media (max-width: 680px) {
+  .calculator {
+    width: 99%;
+    transform: scale(0.88);
+  }
+  .container h4 {
+    display: none;
+  }
+  .history-data {
+    display: hidden;
+    width: 100%;
+    position: absolute;
+    top: 15em;
+    transform: scale(0.9);
+    height: 75vh;
+  }
+  #clearHistory {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 681px) and (max-width: 1280px) {
+  #showHistory {
+    display: none;
+  }
+  .imgHistory {
+    display: none;
+  }
+  .history-data {
+    visibility: visible;
+  }
+  #noHistoryText {
+    margin-top: 5em;
+  }
+}

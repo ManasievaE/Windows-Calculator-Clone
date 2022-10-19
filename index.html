@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--SCREEN-->
+    <div class="calculator">
+      <button id="showHistory">
+        <img
+          src="imgs/history-show.png"
+          class="imgHistory"
+          alt="Show history"
+        />
+      </button>
+      <div class="screen">
+        <div class="data-previous previous"></div>
+        <div class="data-current current"></div>
+      </div>
+      <!--M-BUTTONS-->
+      <div class="m-buttons">
+        <p class="faded">MC</p>
+        <p class="faded">MR</p>
+        <p>M+</p>
+        <p>M-</p>
+        <p>MS</p>
+      </div>
+      <!--BUTTONS-->
+      <button class="data-operation">%</button>
+      <button class="data-all-clear">CE</button>
+      <button class="data-delete-current">C</button>
+      <button class="data-delete">⌫</button>
+      <button class="data-operation-another">¹/x</button>
+      <button class="data-operation-another">x²</button>
+      <button class="data-operation-another">√</button>
+      <button class="data-operation bg">÷</button>
+      <button class="data-number">7</button>
+      <button class="data-number">8</button>
+      <button class="data-number">9</button>
+      <button class="data-operation">x</button>
+      <button class="data-number">4</button>
+      <button class="data-number">5</button>
+      <button class="data-number">6</button>
+      <button class="data-operation">-</button>
+      <button class="data-number">1</button>
+      <button class="data-number">2</button>
+      <button class="data-number">3</button>
+      <button class="data-operation">+</button>
+      <button class="data-operation different">+/-</button>
+      <button class="data-number">0</button>
+      <button class="data-number different">.</button>
+      <button class="data-equals">=</button>
+    </div>
+    <!--HISTORY-->
+    <div class="history-data">
+      <div class="container">
+        <h4>History</h4>
+        <div class="history"></div>
+        <p id="clearHistory"><img src="imgs/delete.png" alt="Clear all" /></p>
+      </div>
+    </div>
+    <script src="scriptttt.js"></script>
+  </body>
+</html>
